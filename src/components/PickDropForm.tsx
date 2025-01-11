@@ -15,8 +15,8 @@ export default function PickDropForm() {
         <SectionHeader title="Pick - Up" color="bg-blue-500" />
         <div className="flex flex-col-3 justify-between">
           <DropdownField label="Locations" value="Kota Semarang" disabled />
-          <DropdownField label="Date" value="20 July 2022" disabled />
-          <DropdownField label="Time" value="07.00" disabled />
+          <DropdownField label="Date" value={pickUpDate} onChange={(e) => setPickUpDate(e.target.value)} />
+          <DropdownField label="Time" value={pickUpTime} onChange={(e) => setPickUpTime(e.target.value)} />
         </div>
       </div>
 
@@ -25,8 +25,8 @@ export default function PickDropForm() {
         <SectionHeader title="Drop - Off" color="bg-blue-300" />
         <div className="flex flex-col-3 justify-between">
           <DropdownField label="Locations" value="Kota Semarang" disabled />
-          <DropdownField label="Date" value="21 July 2022" disabled />
-          <DropdownField label="Time" value="01.00" disabled />
+          <DropdownField label="Date" value={dropOffDate} onChange={(e) => setDropOffDate(e.target.value)} />
+          <DropdownField label="Time" value={dropOffTime} onChange={(e) => setDropOffTime(e.target.value)} />
         </div>
       </div>
     </div>
